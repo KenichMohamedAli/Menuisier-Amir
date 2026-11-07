@@ -20,178 +20,192 @@ body{
         transform: none;
     }
 }
-header{
+header {
     width: 100%;
 }
-.navigation-bar{
+
+.navigation-bar {
     display: flex;
     width: 100%;
-    height: 200px;
+    height: 90px;
     background-color: #A06B3C;
     justify-content: space-between;
+    align-items: center;
     position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 0 20px;
 } 
-.logo-title{
+
+.logo-title {
     display: flex;
     align-items: center;
-    padding: 20px;
 } 
-.logo{
-    width: 170px;
-    height: 170px;
+
+.logo {
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
-    padding: 10px;
 }
-.title{
-    font-size: 70px;
-    padding-left: 20px;
+
+.title {
+    font-size: 1.8rem;
+    padding-left: 15px;
     color: white;
 } 
-.title span{
-    font-size: 70px;
-    color:#361a07;
+
+.title span {
+    font-size: 1.8rem;
+    color: #361a07;
 } 
-.navigation-bar-info{ 
+
+.navigation-bar-info { 
     display: flex;
     align-items: center;
+    gap: 30px;
 }
-.navigation-bar-info a{ 
+
+.navigation-bar-info a { 
     text-decoration: none;
     color: white;
-    margin: 50px; 
-    font-size: clamp(55px,1.5vw,70px);
-    transition: all 0.5s;
+    font-size: 1.1rem;
+    transition: all 0.3s;
 }
-.navigation-bar-info a:hover ,
-.navigation-bar-info a:focus{ 
+
+.navigation-bar-info a:hover,
+.navigation-bar-info a:focus { 
     color: #2C1A0E;
 }
-.Devis-gratuit{
+
+.Devis-gratuit {
     background-color: #2C1A0E;
-    display: flex;
-    text-align: center;
-    border-radius: 14px;
-    margin-right: 20px;
-    align-self: center;
-    padding: 20px;
+    border-radius: 8px;
+    padding: 10px 18px;
 }
+
 .Devis-gratuit:hover,
-.Devis-gratuit:focus{
+.Devis-gratuit:focus {
     background-color: #ffffff;
 }
-main{
+
+main {
     width: 100%;
     display: flex;
     flex-direction: column;
-    height: 100%;
 }
-.information-amir{
+
+.information-amir {
     display: flex;
-    margin-top: 200px;
-    background-color:#2C1A0E;
-    font-size: clamp(70px,1vw,200px);
-    height: 2000px;
+    margin-top: 90px; /* Aligné sur la hauteur du header fixed */
+    background-color: #2C1A0E;
+    min-height: calc(100vh - 90px);
 }
-.localisation{
+
+.localisation {
     width: 50%;
     color: white;
-    margin: 50px 70px;
-    height: 100%;
-    align-content: center;
-    justify-content: space-between;
-    position: relative;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px; /* Espace automatiquement les éléments sans absolute */
 } 
-.blida-alger{
+
+.blida-alger {
     color: #FFCB9C;
-    position: absolute;
-    top: 50px;
-    font-size: clamp(90px,1vw,200px);
+    font-size: clamp(2rem, 3.5vw, 3.5rem);
+    font-weight: bold;
+    line-height: 1.1;
 } 
-.art{
-    margin: 60px 15px;
-    font-size: clamp(130px,1vw,220px);
-    position: absolute;
-    top: 240px;
+
+.art {
+    font-size: clamp(1.8rem, 3vw, 3rem);
+    line-height: 1.2;
 }
-.art span{
+
+.art span {
     color: #FFA83E;
-    font-family: "Italianno",sans-serif;
+    font-family: "Italianno", cursive, sans-serif;
 }
-.depuis-2022{
+
+.depuis-2022 {
     color: #9E8874;
-    font-size: clamp(100px,1vw,10000px);
-    position: absolute;
-    top: 700px;
+    font-size: clamp(1.1rem, 1.8vw, 1.8rem);
 }
-.demander-un-devis{
-    display: block;
-    padding: 20px;
-    margin: 40px 0px;
-    margin-top: 60px;
+
+.demander-un-devis {
+    display: inline-block;
+    padding: 12px 24px;
     width: fit-content;
-    border-radius: 14px;
+    border-radius: 8px;
     text-decoration: none;
     background-color: #ECBD93;
     color: #2C1A0E;
-    transition: all 0.5s;
-    font-size: clamp(90px,1vw,220px);
-    position: absolute;
-    top: 1200px;
+    transition: all 0.3s;
+    font-size: 1.1rem;
+    font-weight: bold;
 }
-.demander-un-devis:hover ,
-.demander-un-devis:focus{
-    transform:scale(1.05);
-    box-shadow: 0px 0px 14px #ffffff ;
+
+.demander-un-devis:hover,
+.demander-un-devis:focus {
+    transform: scale(1.03);
+    box-shadow: 0px 0px 10px #ffffff;
 }
-.voir-réalisation{
+
+.voir-réalisation {
     text-decoration: none;
     color: #9E8874;
     display: flex;
     align-items: center;
-    transition: all 0.5s;
-    margin-top: 70px;
-    font-size: clamp(95px,1vw,5em);
-    position: absolute;
-    top: 1500px;
+    transition: all 0.3s;
+    font-size: 1.2rem;
 }
+
 .voir-réalisation:hover,
-.voir-réalisation:focus{
-    color:#FFA83E;
+.voir-réalisation:focus {
+    color: #FFA83E;
 }
-.voir-réalisation i{
-    margin: 0px 20px;
+
+.voir-réalisation i {
+    margin: 0px 10px;
 }
-.photo-du-bois{
+
+.photo-du-bois {
     background-image: url('p-bois.jpeg');
     background-size: cover;  
-    background-position:initial;
-    background-repeat: repeat;
+    background-position: center;
     width: 50%;
-    height: 100%;
+    min-height: 100%;
 }
-.mini-information-amir{
+
+.mini-information-amir {
     background-color: #2C1A0E;
-    color:#ECBD93;
+    color: #ECBD93;
     display: flex;
     justify-content: space-between;
 }
-.mini-information-amir div{
-    border-right: solid #9E8874 0.5px ;
-    border-top: solid #9E8874 0.5px ;
-    padding: 40px;
-    justify-content: center;
-    align-items: center;
+
+.mini-information-amir div {
+    border-right: solid #9E8874 0.5px;
+    border-top: solid #9E8874 0.5px;
+    padding: 30px 20px;
     width: 33.33%;
-    font-size: clamp(50px,1.5vw,80px);
+    text-align: center;
+    font-size: clamp(1rem, 1.5vw, 1.4rem);
 }
-.mini-information-amir div p{
+
+.mini-information-amir div p {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
-.mini-information-amir div .p1{
+
+.mini-information-amir div .p1 {
     font-family: sans-serif;
+    font-size: clamp(1.8rem, 2.5vw, 2.5rem);
+    font-weight: bold;
 }
 
 
